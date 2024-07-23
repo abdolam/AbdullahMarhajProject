@@ -1,0 +1,282 @@
+/* makes sizing simpler */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+/* ************************ */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Common styles */
+/* ************* */
+
+body,
+html {
+  width: 100%;
+  font-family: "Heebo", sans-serif;
+  color: #020253;
+  direction: rtl;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 900;
+  padding-bottom: 15px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* content style */
+
+.project {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.project > .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 60%;
+  background-color: #fff;
+  margin: auto;
+}
+
+.contact-form p {
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.contact-form label {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c2c2c;
+}
+
+.contact-form input {
+  display: inline-block;
+  height: 50px;
+  width: 100%;
+  border: none;
+  background-color: #e5eeff;
+  border-bottom: 4px solid #020253;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #020253;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 35px;
+  width: 150px;
+  transition: all 150ms;
+}
+
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:focus {
+  transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+}
+
+.image {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/Coffee.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Media Query */
+/* *************/
+
+@media only screen and (max-width: 1200px) {
+  .project .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*
+@media only screen and (max-width: 992px) {
+  .project .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .project .content > div {
+    width: 100%;
+  }
+
+  .project .image {
+    height: 350px;
+  }
+
+  .contact-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+  }
+
+  .project .content .contact-form > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+  }
+
+  .contact-form form {
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+  }
+}
+*/
+
+@media only screen and (max-width: 992px) {
+  .project .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .project .content > div {
+    width: 100%;
+  }
+
+  .project .image {
+    height: 350px;
+  }
+
+  .contact-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+  }
+
+  .project .content .contact-form > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+  }
+
+  .contact-form form {
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .contact-form p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .project .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .project .content > div {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 90%;
+    /* display: grid;
+    grid-template-columns: 40% 60%; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project .content .contact-form > div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    padding-top: 50px;
+  }
+
+  .contact-form form {
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .contact-form p {
+    font-size: 15px;
+  }
+
+  .contact-form label {
+    font-size: 12px;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 16px;
+
+    width: 100%;
+    transition: all 150ms;
+  }
+}

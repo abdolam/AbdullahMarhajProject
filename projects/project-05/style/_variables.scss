@@ -1,0 +1,25 @@
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin img-center {
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin items-div-align {
+  text-align: center;
+  padding: 0 15%;
+}
+
+@mixin p-style {
+  font-size: 20px;
+  font-weight: 400;
+  color: #f9f9f9;
+  padding: 25px 0;
+}
+
+$bgcolor: #e5eeff;

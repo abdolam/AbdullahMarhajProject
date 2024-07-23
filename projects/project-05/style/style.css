@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* responsive images/videos */
+/* ************************ */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  width: 100wh;
+  margin: auto;
+}
+
+input,
+textarea {
+  border: none;
+}
+
+h1 {
+  font-size: 60px;
+  color: #0ee1da;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  color: #f9f9f9;
+  padding: 25px 0;
+}
+
+.continer {
+  width: 100%;
+  padding: 15% 0;
+  font-family: "assistant", sans-serif;
+  background-color: #e5eeff;
+}
+
+.continer .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(6, 270px);
+  gap: 20px;
+  justify-content: center;
+  grid-template-areas: "item-1 item-2 welcome welcome" "item-3 item-4 welcome welcome" "item-5 item-6 item-7 item-8" "contact-us contact-us item-9 item-10" "contact-us contact-us item-11 item-12" "contact-us contact-us item-13 item-14";
+}
+
+.continer .item-1 {
+  grid-area: item-1;
+  background-image: url(../images/item-1.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-2 {
+  grid-area: item-2;
+  background-image: url(../images/item-2.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-3 {
+  grid-area: item-3;
+  background-image: url(../images/item-3.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-4 {
+  grid-area: item-4;
+  background-image: url(../images/item-4.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-5 {
+  grid-area: item-5;
+  background-image: url(../images/item-5.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-6 {
+  grid-area: item-6;
+  background-image: url(../images/item-6.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-7 {
+  grid-area: item-7;
+  background-image: url(../images/item-7.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-8 {
+  grid-area: item-8;
+  background-image: url(../images/item-8.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-9 {
+  grid-area: item-9;
+  background-image: url(../images/item-9.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-10 {
+  grid-area: item-10;
+  background-image: url(../images/item-10.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-11 {
+  grid-area: item-11;
+  background-image: url(../images/item-11.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-12 {
+  grid-area: item-12;
+  background-image: url(../images/item-12.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-13 {
+  grid-area: item-13;
+  background-image: url(../images/item-13.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .item-14 {
+  grid-area: item-14;
+  background-image: url(../images/item-14.png);
+  background-position: center center;
+  background-size: cover;
+}
+
+.continer .welcome {
+  grid-area: welcome;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15%;
+  background-color: #020253;
+}
+.continer .welcome-out {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15%;
+  background-color: #020253;
+  display: none;
+}
+.continer .contact-us {
+  grid-area: contact-us;
+  background-color: #8e097c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15%;
+}
+
+.continer .contact-us form {
+  width: 100%;
+  font-family: "heebo", sans-serif;
+}
+
+.continer .contact-us label {
+  float: right;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0ee1da;
+}
+
+.continer .contact-us input {
+  height: 50px;
+  width: 100%;
+}
+
+.continer .contact-us textarea {
+  width: 100%;
+  height: 150px;
+}
+
+.continer .contact-us input,
+textarea {
+  border-bottom: 5px solid #0ee1da;
+}
+
+.continer .contact-us input[type=submit] {
+  font-size: 22px;
+  color: #011560;
+  font-weight: 700;
+  background-color: #0ee1da;
+  border: none;
+  margin-top: 10px;
+}
+
+.continer .contact-us input[type=submit]:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(8, 270px);
+    gap: 15px;
+    grid-template-areas: "item-1 item-2 item-3" "item-4 welcome welcome" "item-5 welcome welcome" "item-6 item-7 item-8" "contact-us contact-us item-9" "contact-us contact-us item-10" "contact-us contact-us item-11" "item-12 item-13 item-14";
+  }
+}
+@media only screen and (max-width: 992px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(12, 270px);
+    gap: 10px;
+    grid-template-areas: "welcome welcome" "welcome welcome" "item-1 item-2" "item-3 item-4" "item-5 item-6" "item-7 item-8" "contact-us contact-us" "contact-us contact-us" "contact-us contact-us" "item-9 item-10" "item-11 item-12" "item-13  item-14";
+  }
+}
+@media only screen and (max-width: 720px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(12, 170px);
+    gap: 10px;
+    grid-template-areas: "welcome welcome" "welcome welcome" "item-1 item-2" "item-3 item-4" "item-5 item-6" "item-7 item-8" "contact-us contact-us" "contact-us contact-us" "contact-us contact-us" "item-9 item-10" "item-11 item-12" "item-13  item-14";
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .contact-us p {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+  .continer .contact-us label {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .continer .contact-us input {
+    height: 32px;
+  }
+  .continer .contact-us textarea {
+    height: 100px;
+  }
+  .continer .contact-us input[type=submit] {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 145px);
+    gap: 10px;
+    padding: 30px 20px;
+    grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-6" "item-7 item-8" "contact-us contact-us" "contact-us contact-us" "contact-us contact-us" "contact-us contact-us" "item-9 item-10" "item-11 item-12" "item-13  item-14";
+  }
+  .continer {
+    padding: 0;
+    margin: 0;
+  }
+  .continer .welcome {
+    display: none;
+  }
+  .continer .welcome-out {
+    display: flex;
+    height: 300px;
+  }
+  .continer .contact-us {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 18px;
+  }
+  .contact-us p {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+  .continer .contact-us label {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .continer .contact-us input {
+    height: 32px;
+  }
+  .continer .contact-us textarea {
+    height: 100px;
+  }
+  .continer .contact-us input[type=submit] {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,242 @@
+/* makes sizing simpler */
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap&family=Satisfy&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+/* ************************ */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Common styles */
+/* ************* */
+
+body,
+html {
+  width: 100%;
+  font-family: "Varela Round", sans-serif;
+  color: #fff;
+  direction: rtl;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: "satisfy", sans-serif;
+  font-size: 160px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0px 0px 36px #00000087;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* content style */
+
+#project {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20%;
+  background-image: linear-gradient(#281eff, #2dff8c);
+  background-image: -moz-linear-gradient(#281eff, #2dff8c);
+  background-image: -o-linear-gradient(#281eff, #2dff8c);
+  background-image: -webkit-linear-gradient(#281eff, #2dff8c);
+}
+
+#project > .content {
+  width: 100%;
+  text-align: center;
+}
+
+#project p {
+  font-size: 16px;
+  padding: 25px 5% 50px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 5fr 5fr 2fr;
+  gap: 25px;
+  align-items: end;
+  text-align: right;
+}
+
+.contact-form input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #fff;
+  background-color: #ffffff25;
+  color: azure;
+  padding: 0 15px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #fff;
+  opacity: 1;
+  transition: all 150ms;
+  color: #1c1c1c;
+}
+
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:focus {
+  transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+}
+
+/* Media Query */
+/* *********** */
+
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 120px;
+  }
+
+  h2 {
+    font-size: 30px;
+    padding: 25px 0;
+  }
+
+  #project {
+    padding: 0;
+  }
+
+  #project > .content {
+    width: 60%;
+  }
+
+  #project p {
+    font-size: 16px;
+    padding: 25px 0 80px;
+  }
+
+  .contact-form {
+    grid-template-columns: 5fr 5fr 2fr;
+  }
+
+  .contact-form label {
+    font-size: 14px;
+  }
+
+  .contact-form input[type="submit"] {
+    color: #2823fd;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 24px;
+    padding: 25px 0;
+  }
+
+  #project {
+    padding: 0;
+  }
+
+  #project > .content {
+    width: 80%;
+  }
+
+  #project p {
+    font-size: 16px;
+    padding: 25px 0 80px;
+  }
+
+  .contact-form {
+    grid-template-columns: 100%;
+  }
+
+  .contact-form label {
+    font-size: 14px;
+  }
+
+  .contact-form input[type="submit"] {
+    color: #2823fd;
+  }
+}
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 18px;
+    padding: 25px 0;
+  }
+
+  #project {
+    padding: 0;
+  }
+
+  #project > .content {
+    width: 80%;
+  }
+
+  #project p {
+    font-size: 16px;
+    padding: 25px 0 80px;
+  }
+
+  .contact-form {
+    grid-template-columns: 100%;
+  }
+
+  .contact-form label {
+    font-size: 14px;
+  }
+
+  .contact-form input[type="submit"] {
+    color: #2823fd;
+  }
+}

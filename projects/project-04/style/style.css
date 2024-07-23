@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
+/* force styling of type through styling, rather than elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  direction: rtl;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* responsive images/videos */
+/* ************************ */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* CSS reset ends here */
+
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 25px 10px 30px;
+}
+
+.continer {
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  font-family: "Heebo", sans-serif;
+}
+
+.continer .background {
+  width: 100%;
+  height: 55%;
+  background-image: url(../images/Path\ 15.png);
+  background-position: top center;
+  background-size: cover;
+}
+
+.continer .contact-form {
+  width: 570px;
+  height: 650px;
+  position: absolute;
+  top: 12%;
+  right: 15%;
+  background-color: #1a1a1ad4;
+  padding: 75px;
+}
+
+.contact-form input[type="text"],
+input[type="email"] {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #d31c75;
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 25px;
+  padding: 10px 50px;
+  background-color: #d31c75;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  transition: all 150ms;
+  -webkit-transition: all 150ms;
+  -o-transition: all 150ms;
+  -moz-transition: all 150ms;
+}
+
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:focus {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+}
+
+@media only screen and (max-width: 1200px) {
+  .continer .contact-form {
+    top: 25%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .continer .contact-form {
+    width: 80%;
+    top: 25%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .continer .contact-form {
+    width: 80%;
+    top: 25%;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .contact-form input[type="submit"] {
+    font-size: 15px;
+  }
+}

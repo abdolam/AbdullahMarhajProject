@@ -1,0 +1,280 @@
+@import "./variables", "./css-reset";
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap");
+
+h1 {
+  font-size: 60px;
+  color: #0ee1da;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+p {
+  @include p-style;
+}
+
+.continer {
+  width: 100%;
+  padding: 15% 0;
+  font-family: "assistant", sans-serif;
+  background-color: $bgcolor;
+}
+
+.continer .grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(6, 270px);
+  gap: 20px;
+  justify-content: center;
+  grid-template-areas:
+    "item-1 item-2 welcome welcome"
+    "item-3 item-4 welcome welcome"
+    "item-5 item-6 item-7 item-8"
+    "contact-us contact-us item-9 item-10"
+    "contact-us contact-us item-11 item-12"
+    "contact-us contact-us item-13 item-14";
+}
+
+@for $i from 1 through 14 {
+  .continer {
+    & .item-#{$i} {
+      grid-area: item-#{$i};
+      background-image: url(../images/item-#{$i}.png);
+      @include img-center;
+    }
+  }
+}
+
+.continer {
+  & .welcome {
+    grid-area: welcome;
+    @include flex-center;
+    @include items-div-align;
+    background-color: #020253;
+  }
+
+  & .welcome-out {
+    @include flex-center;
+    @include items-div-align;
+    background-color: #020253;
+    display: none;
+  }
+
+  & .contact-us {
+    grid-area: contact-us;
+    background-color: #8e097c;
+    @include flex-center;
+    @include items-div-align;
+  }
+}
+
+.continer .contact-us form {
+  width: 100%;
+  font-family: "heebo", sans-serif;
+}
+
+.continer .contact-us label {
+  float: right;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0ee1da;
+}
+
+.continer .contact-us input {
+  height: 50px;
+  width: 100%;
+}
+
+.continer .contact-us textarea {
+  width: 100%;
+  height: 150px;
+}
+
+.continer .contact-us input,
+textarea {
+  border-bottom: 5px solid #0ee1da;
+}
+
+.continer .contact-us input[type="submit"] {
+  font-size: 22px;
+  color: #011560;
+  font-weight: 700;
+  background-color: #0ee1da;
+  border: none;
+  margin-top: 10px;
+}
+
+.continer .contact-us input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(8, 270px);
+    gap: 15px;
+    grid-template-areas:
+      "item-1 item-2 item-3"
+      "item-4 welcome welcome"
+      "item-5 welcome welcome"
+      "item-6 item-7 item-8"
+      "contact-us contact-us item-9"
+      "contact-us contact-us item-10"
+      "contact-us contact-us item-11"
+      "item-12 item-13 item-14";
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(12, 270px);
+    gap: 10px;
+    grid-template-areas:
+      "welcome welcome"
+      "welcome welcome"
+      "item-1 item-2"
+      "item-3 item-4"
+      "item-5 item-6"
+      "item-7 item-8"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "item-9 item-10"
+      "item-11 item-12"
+      "item-13  item-14";
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(12, 170px);
+    gap: 10px;
+    grid-template-areas:
+      "welcome welcome"
+      "welcome welcome"
+      "item-1 item-2"
+      "item-3 item-4"
+      "item-5 item-6"
+      "item-7 item-8"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "item-9 item-10"
+      "item-11 item-12"
+      "item-13  item-14";
+  }
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .contact-us p {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  .continer .contact-us label {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  .continer .contact-us input {
+    height: 32px;
+  }
+
+  .continer .contact-us textarea {
+    height: 100px;
+  }
+
+  .continer .contact-us input[type="submit"] {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .continer .grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(11, 145px);
+    gap: 10px;
+    padding: 30px 20px;
+    grid-template-areas:
+      "item-1 item-2"
+      "item-3 item-4"
+      "item-5 item-6"
+      "item-7 item-8"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "contact-us contact-us"
+      "item-9 item-10"
+      "item-11 item-12"
+      "item-13  item-14";
+  }
+
+  .continer {
+    padding: 0;
+    margin: 0;
+  }
+
+  .continer .welcome {
+    display: none;
+  }
+
+  .continer .welcome-out {
+    display: flex;
+    height: 300px;
+  }
+
+  .continer .contact-us {
+    padding: 0 20px;
+    @include flex-center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .contact-us p {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  .continer .contact-us label {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+
+  .continer .contact-us input {
+    height: 32px;
+  }
+
+  .continer .contact-us textarea {
+    height: 100px;
+  }
+
+  .continer .contact-us input[type="submit"] {
+    font-size: 14px;
+  }
+}

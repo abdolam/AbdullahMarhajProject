@@ -1,0 +1,461 @@
+/* makes sizing simpler */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+/* responsive images/videos */
+/* ************************ */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+/* Google Icons */
+.material-symbols-rounded {
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 20px;
+  /* font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20; */
+}
+/* Common styles */
+/* ************* */
+
+body,
+html {
+  width: 100%;
+  font-family: "Heebo", sans-serif;
+  direction: rtl;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 900;
+  color: #fdbd03;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.project {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project .content {
+  width: 75%;
+  height: 80vh;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+}
+
+.project .content .image {
+  min-height: 100%;
+  background-image: url(../images/mobile-messag1@2x.png);
+  background-position: right center;
+  background-size: 280px;
+  background-repeat: no-repeat;
+}
+
+.project .content p {
+  font-size: 16px;
+  font-weight: 400px;
+  width: 50%;
+  padding: 15px 0;
+  color: #020253;
+}
+
+.project .contact-form {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 1fr 2fr;
+  gap: 15px;
+}
+
+.project .contact-form input {
+  border: none;
+  border-bottom: 4px solid #fdbd03;
+  background-color: #e5eeff;
+  width: 100%;
+  height: 50px;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.project .contact-form label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.project .contact-form .text-area {
+  font-size: 12px;
+  font-weight: 400;
+  grid-row-start: 2;
+  grid-column: 1 / span 2;
+}
+
+.project .contact-form .text-area textarea {
+  border: none;
+  border-bottom: 4px solid #fdbd03;
+  background-color: #e5eeff;
+  width: 100%;
+  height: 70%;
+}
+
+.project .contact-form input[type="submit"] {
+  background-color: #fdbd03;
+  border: none;
+  width: fit-content;
+  padding: 7px 35px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 250ms;
+}
+
+.project .contact-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.project .contact-form input[type="submit"]:focus {
+  transform: scale(0.9);
+}
+
+.top-line {
+  width: 25%;
+  height: 12px;
+  background-color: #fdbd03;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottom-line {
+  width: 50%;
+  height: 12px;
+  background-color: #fdbd03;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.media-icons {
+  width: 60px;
+  height: 60px;
+  background-color: #fdbd03;
+  border-radius: 50px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.7s;
+}
+
+.media-icons:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.whatsapp {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-image: url(../images/whatsapp-icon-transparent@50x50.png);
+  background-size: 70%;
+}
+
+.media-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+}
+
+.media-icons-grid div:nth-child(1) {
+  background-image: url(../images/phone-icon-transparent\ 50x28.png);
+}
+
+.media-icons-grid div:nth-child(2) {
+  background-image: url(../images/linkedin-icon-transparent@50x50.png);
+}
+
+.media-icons-grid div:nth-child(3) {
+  background-image: url(../images/instagram-icon-transparent@50x50.png);
+}
+
+.media-icons-grid div:nth-child(4) {
+  background-image: url(../images/facebook-icon@50x50.png);
+}
+
+/* Media Query */
+/* *********** */
+@media only screen and (max-width: 992px) {
+  body {
+    height: 100%;
+  }
+
+  .project {
+    height: 100%;
+    padding-bottom: 200px;
+  }
+
+  .project .content {
+    width: 65%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+
+  .project .content .image {
+    background-size: 120px;
+    background-position: center center;
+    margin: 150px 0;
+  }
+
+  .project .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .contact-form div {
+    width: 100%;
+  }
+
+  .project .contact-form-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .contact-form .text-area textarea {
+    height: 100px;
+  }
+
+  .project .contact-form input[type="submit"] {
+    width: 100%;
+  }
+
+  .project .contact-form-area p {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .whatsapp {
+    display: none;
+  }
+
+  .bottom-line {
+    width: 100%;
+  }
+
+  .top-line {
+    width: 90%;
+  }
+
+  .media-icons-grid {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    height: 100%;
+  }
+
+  .project {
+    height: 100%;
+    padding-bottom: 200px;
+  }
+
+  .project .content {
+    width: 75%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+
+  .project .content .image {
+    background-size: 120px;
+    background-position: center center;
+    margin: 150px 0;
+  }
+
+  .project .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .contact-form div {
+    width: 100%;
+  }
+
+  .project .contact-form-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .contact-form .text-area textarea {
+    height: 100px;
+  }
+
+  .project .contact-form input[type="submit"] {
+    width: 100%;
+  }
+
+  .project .contact-form-area p {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .whatsapp {
+    display: none;
+  }
+
+  .bottom-line {
+    width: 100%;
+  }
+
+  .top-line {
+    width: 90%;
+  }
+
+  .media-icons-grid {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    height: 100%;
+  }
+
+  .project {
+    height: 100%;
+    padding-bottom: 200px;
+  }
+
+  .project .content {
+    width: 85%;
+    height: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+
+  .project .content .image {
+    background-size: 120px;
+    background-position: center center;
+    margin: 150px 0;
+  }
+
+  .project .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .contact-form div {
+    width: 100%;
+  }
+
+  .project .contact-form-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project .contact-form .text-area textarea {
+    height: 100px;
+  }
+
+  .project .contact-form input[type="submit"] {
+    width: 100%;
+  }
+
+  .project .contact-form-area p {
+    text-align: center;
+    width: 80%;
+    margin-bottom: 35px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .whatsapp {
+    display: none;
+  }
+
+  .bottom-line {
+    width: 100%;
+  }
+
+  .top-line {
+    width: 90%;
+  }
+
+  .media-icons-grid {
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 20px;
+  }
+}
