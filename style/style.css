@@ -1,0 +1,780 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* responsive images/videos */
+/* ************************ */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+/* Google Icons */
+.material-symbols-rounded {
+  font-weight: 500;
+  color: #2c2c2c;
+  font-size: 24px;
+  /* font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20; */
+}
+/* Common styles */
+/* ************* */
+
+body,
+html {
+  width: 100%;
+  font-family: "Heebo", sans-serif;
+  direction: rtl;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 900;
+  color: #3a3a3a;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: 900;
+  color: #3a3a3a;
+}
+
+h3 {
+  font-size: 23px;
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+.button {
+  background-color: #1ae0ec;
+  width: fit-content;
+  height: fit-content;
+  padding: 6px 45px;
+  transition: transform 0.75s;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Nav Bar section Styles*/
+/* ********************* */
+
+#navBar {
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+}
+
+nav {
+  width: 70%;
+}
+
+#navBar input[type="checkbox"] {
+  display: none;
+}
+
+#navBar nav > label {
+  display: none;
+}
+
+#navBar ul {
+  width: 100%;
+  height: 80px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+#navBar a {
+  color: #2c2c2c;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+#navBar a:hover {
+  color: #1ae0ec;
+}
+
+#navBar li:nth-child(1) a {
+  font-weight: bold;
+  color: #1ae0ec;
+}
+
+#navBar .logo {
+  width: 30%;
+  font-family: "Satisfy", cursive;
+  font-size: 25px;
+  text-align: center;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+#navBar .profile-img {
+  height: 62px;
+  width: 62px;
+  background-image: url(../images/profile-image.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100px;
+}
+
+#navBar .profile-img:hover {
+  cursor: pointer;
+}
+
+#navBar .profile-img a {
+  opacity: 0;
+}
+
+.logo p {
+  padding-left: 10px;
+}
+
+/* Hero Section Styles */
+/* ******************* */
+
+#hero {
+  width: 100%;
+  background-image: url(../images/hero-background.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+#hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 460px;
+  padding: 0 25%;
+  background-color: #13e8f163;
+}
+
+#hero p {
+  color: #3a3a3a;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Technologies Bar Section styles */
+/* ******************************* */
+
+#techBar {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+#techBar > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 10px;
+  width: 35%;
+}
+
+#techBar > div > div {
+  text-align: center;
+  transition: transform 0.5s;
+}
+
+#techBar > div > div:hover {
+  transform: scale(1.2);
+}
+
+/* About Me Section styles*/
+/* ********************** */
+
+#aboutMe > div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#aboutMe .profile-img {
+  /* display: inline-block; */
+  height: 150px;
+  width: 150px;
+  margin-bottom: 35px;
+  background-image: url(../images/profile-image.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 150px;
+}
+
+#aboutMe p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #3a3a3a;
+  padding: 25px 0;
+}
+
+#aboutMe .button {
+  border-radius: 25px;
+  margin: 45px;
+}
+
+#aboutMe .button a {
+  color: #3a3a3a;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Projects Gallary Section Styles */
+/* ******************************* */
+
+#projects {
+  width: 100%;
+  padding: 100px 0 120px;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+#projects > div {
+  width: 75%;
+  margin: auto;
+}
+
+#projects .top-heading {
+  width: 40%;
+  margin: auto;
+  padding-bottom: 25px;
+}
+
+#projects .top-heading p {
+  font-size: 20px;
+  padding: 15px 0;
+}
+
+#projects .projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 550px);
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 0;
+}
+
+#projects .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 415px;
+  background-color: #fff;
+  box-shadow: 3px 3px 15px #00000029;
+  border-radius: 10px;
+}
+
+#projects .top-image {
+  width: 100%;
+  height: 223px;
+  border-radius: 10px 10px 0 0;
+}
+
+#projects .project:nth-child(1) .top-image {
+  background-image: url(../images/project-01.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+
+#projects .project:nth-child(2) .top-image {
+  background-image: url(../images/project-02.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+#projects .project:nth-child(3) .top-image {
+  background-image: url(../images/project-03.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+#projects .project:nth-child(4) .top-image {
+  background-image: url(../images/project-04.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+#projects .project:nth-child(5) .top-image {
+  background-image: url(../images/project-05.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+#projects .project:nth-child(6) .top-image {
+  background-image: url(../images/project-06.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+}
+
+#projects .proj-desc {
+  padding: 20px 25px;
+}
+
+.proj-desc p {
+  font-size: 16px;
+  padding-top: 15px;
+}
+
+#projects .small-icons {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+}
+
+#projects .small-icons div {
+  height: fit-content;
+  width: 25%;
+  padding: 2%;
+}
+
+#projects .button {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 2px 15px;
+  margin-bottom: 50px;
+}
+
+#projects .button a {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c2c2c;
+  padding-left: 5px;
+}
+
+/* Contact form section style */
+/* ************************** */
+
+#contact-us {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+#contact-us .contact-form {
+  font-size: 20px;
+  font-weight: 400;
+  width: 45%;
+  height: 100%;
+  padding-top: 160px;
+  padding-bottom: 150px;
+  padding-right: 15%;
+}
+
+#contact-us .contact-form form {
+  padding-top: 30px;
+}
+
+#contact-us .contact-form h2 {
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+#contact-us .contact-form label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#contact-us .contact-form input {
+  width: 100%;
+  height: 50px;
+  border-bottom: 4px solid #1ae0ec;
+  margin-bottom: 25px;
+}
+
+#contact-us .contact-form textarea {
+  width: 100%;
+  height: 100px;
+  border-bottom: 4px solid #1ae0ec;
+}
+
+#contact-us .contact-form textarea,
+input {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#contact-us .contact-form input[type="submit"] {
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 50px;
+  margin-top: 25px;
+  border: none;
+  background-color: #1ae0ec;
+  border-radius: 25px;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.7s;
+}
+
+#contact-us .contact-form input[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+/* Find us on - social media icons  */
+/* ******************************** */
+
+#find-us-on {
+  width: 100%;
+  background-color: #1ae0ec;
+}
+
+#find-us-on .icons-bar {
+  margin: auto;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 40px 0;
+}
+
+#find-us-on .icons-bar .media-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  transition: all 0.7s;
+}
+
+#find-us-on .icons-bar .media-icon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#find-us-on .icons-bar .media-icon span {
+  padding-top: 15px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Footer */
+/* ****** */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #1ae0ec;
+  height: 40px;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1200px) {
+  #navBar a {
+    font-size: 20px;
+  }
+
+  #navBar ul {
+    gap: 35px;
+  }
+
+  #navBar p {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  #hero p {
+    font-size: 18px;
+  }
+
+  #aboutMe p {
+    font-size: 18px;
+  }
+
+  #aboutMe .button a {
+    font-size: 18px;
+  }
+
+  #projects .projectsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 550px);
+  }
+
+  #projects .top-heading p {
+    font-size: 18px;
+  }
+
+  .proj-desc p {
+    font-size: 14px;
+  }
+
+  #projects .button a {
+    font-size: 12px;
+  }
+
+  .button .material-symbols-rounded {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #navBar .material-symbols-rounded {
+    font-size: 50px;
+    font-weight: 600;
+    color: #1ae0ec;
+  }
+
+  #navBar nav > label {
+    display: block;
+  }
+
+  #navBar nav > ul {
+    display: none;
+  }
+
+  #navBar .logo {
+    width: 60%;
+    height: fit-content;
+  }
+
+  #navBar input[type="checkbox"]:checked ~ ul {
+    display: block;
+    height: fit-content;
+  }
+
+  #navBar label > span::after {
+    content: "menu";
+  }
+
+  #navBar input[type="checkbox"]:checked ~ label > span::after {
+    content: "menu_open";
+  }
+
+  #navBar ul li {
+    padding: 5px 0;
+  }
+
+  #navBar {
+    min-height: 80px;
+    display: flex;
+    padding: 25px 0;
+  }
+
+  #navBar a {
+    font-size: 18px;
+  }
+
+  #navBar p {
+    display: none;
+  }
+
+  header {
+    width: 85%;
+  }
+
+  #hero h1 {
+    font-size: 45px;
+  }
+
+  #hero p {
+    font-size: 15px;
+    padding-top: 25px;
+  }
+
+  #hero > div {
+    padding: 0 50px;
+  }
+
+  #techBar > div {
+    width: 70%;
+  }
+
+  #aboutMe > div {
+    width: 85%;
+    padding-bottom: 50px;
+  }
+
+  #aboutMe h2 {
+    font-size: 25px;
+  }
+
+  #aboutMe p {
+    font-size: 15px;
+  }
+
+  #aboutMe .button {
+    border-radius: 15px;
+    margin-top: 25px;
+    padding: 4px 25px;
+  }
+
+  #aboutMe .button a {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  #projects {
+    padding-bottom: 100px;
+  }
+
+  #projects .project {
+    margin: auto;
+  }
+
+  #projects > div {
+    width: 85%;
+  }
+
+  #projects .top-heading {
+    width: 100%;
+  }
+
+  #projects h2 {
+    font-size: 25px;
+  }
+
+  #projects .top-heading p {
+    font-size: 15px;
+  }
+  #projects .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-us {
+    flex-direction: column-reverse;
+  }
+
+  #contact-us img {
+    width: 40%;
+    float: left;
+    padding-left: 10px;
+  }
+
+  #contact-us .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+    padding: 0;
+    padding-bottom: 50px;
+  }
+
+  #contact-us .contact-form h2 {
+    font-size: 25px;
+  }
+
+  #contact-us .contact-form p {
+    font-size: 15px;
+  }
+
+  #contact-us .contact-form label {
+    font-size: 12px;
+  }
+
+  #contact-us .contact-form input {
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  #contact-us .contact-form form {
+    width: 100%;
+  }
+
+  #contact-us .contact-form input[type="submit"] {
+    justify-self: center;
+    margin-top: 15px;
+    font-size: 12px;
+    height: fit-content;
+    padding: 4px 28px;
+  }
+
+  #find-us-on .icons-bar {
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  footer {
+    height: 30px;
+  }
+
+  footer span {
+    font-size: 10px;
+  }
+}
