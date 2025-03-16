@@ -219,10 +219,10 @@ nav {
 
 #techBar > div {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   justify-content: center;
   gap: 10px;
-  width: 35%;
+  width: 60%;
 }
 
 #techBar > div > div {
@@ -281,30 +281,30 @@ nav {
 /* Projects Gallary Section Styles */
 /* ******************************* */
 
-#projects {
+.projects {
   width: 100%;
   padding: 100px 0 120px;
   background-color: #f6f6f6;
   text-align: center;
 }
 
-#projects > div {
+.projects > div {
   width: 75%;
   margin: auto;
 }
 
-#projects .top-heading {
+.projects .top-heading {
   width: 40%;
   margin: auto;
   padding-bottom: 25px;
 }
 
-#projects .top-heading p {
+.projects .top-heading p {
   font-size: 20px;
   padding: 15px 0;
 }
 
-#projects .projectsGrid {
+.projects .projectsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 550px);
@@ -313,7 +313,7 @@ nav {
   padding: 50px 0;
 }
 
-#projects .project {
+.projects .project {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -324,55 +324,20 @@ nav {
   border-radius: 10px;
 }
 
-#projects .top-image {
+.projects .project .top-image {
   width: 100%;
-  height: 223px;
   border-radius: 10px 10px 0 0;
 }
 
-#projects .project:nth-child(1) .top-image {
-  background-image: url(../images/project-01.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
+.projects .project .top-image img {
+  border-radius: 10px 10px 0 0;
 }
 
-#projects .project:nth-child(2) .top-image {
-  background-image: url(../images/project-02.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top center;
+.projects:nth-last-of-type(2) {
+  background-color: #ffffff;
 }
 
-#projects .project:nth-child(3) .top-image {
-  background-image: url(../images/project-03.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top center;
-}
-
-#projects .project:nth-child(4) .top-image {
-  background-image: url(../images/project-04.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top center;
-}
-
-#projects .project:nth-child(5) .top-image {
-  background-image: url(../images/project-05.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top center;
-}
-
-#projects .project:nth-child(6) .top-image {
-  background-image: url(../images/project-06.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top center;
-}
-
-#projects .proj-desc {
+.projects .proj-desc {
   padding: 20px 25px;
 }
 
@@ -381,20 +346,20 @@ nav {
   padding-top: 15px;
 }
 
-#projects .small-icons {
+.projects .small-icons {
   display: flex;
   width: 30%;
   align-items: center;
   justify-content: center;
 }
 
-#projects .small-icons div {
+.projects .small-icons div {
   height: fit-content;
   width: 25%;
   padding: 2%;
 }
 
-#projects .button {
+.projects .button {
   display: flex;
   align-items: center;
   border-radius: 15px;
@@ -402,7 +367,7 @@ nav {
   margin-bottom: 50px;
 }
 
-#projects .button a {
+.projects .button a {
   font-size: 14px;
   font-weight: 600;
   color: #2c2c2c;
@@ -449,6 +414,7 @@ nav {
   height: 50px;
   border-bottom: 4px solid #1ae0ec;
   margin-bottom: 25px;
+  padding: 0 10px;
 }
 
 #contact-us .contact-form textarea {
@@ -478,6 +444,19 @@ input {
 
 #contact-us .contact-form input[type="submit"]:hover {
   transform: scale(1.1);
+  cursor: pointer;
+}
+
+#contact-us .contact-form .invalid-message {
+  color: #c91432;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#contact-us .contact-form .success-message {
+  color: #22bb33;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 /* Find us on - social media icons  */
@@ -571,12 +550,12 @@ footer {
     font-size: 18px;
   }
 
-  #projects .projectsGrid {
+  .projects .projectsGrid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 550px);
   }
 
-  #projects .top-heading p {
+  .projects .top-heading p {
     font-size: 18px;
   }
 
@@ -584,7 +563,7 @@ footer {
     font-size: 14px;
   }
 
-  #projects .button a {
+  .projects .button a {
     font-size: 12px;
   }
 
@@ -689,30 +668,30 @@ footer {
     font-weight: 500;
   }
 
-  #projects {
+  .projects {
     padding-bottom: 100px;
   }
 
-  #projects .project {
+  .projects .project {
     margin: auto;
   }
 
-  #projects > div {
+  .projects > div {
     width: 85%;
   }
 
-  #projects .top-heading {
+  .projects .top-heading {
     width: 100%;
   }
 
-  #projects h2 {
+  .projects h2 {
     font-size: 25px;
   }
 
-  #projects .top-heading p {
+  .projects .top-heading p {
     font-size: 15px;
   }
-  #projects .projectsGrid {
+  .projects .projectsGrid {
     grid-template-columns: 1fr;
   }
 

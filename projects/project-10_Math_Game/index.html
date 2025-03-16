@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>לומדת חשבון</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="game-container">
+        <h1>מתמטיקלנד</h1>
+        <h2>משחק חשבון לכל גיל</h2>
+        <hr />
+        <h3>אפשריות משחק</h3>
+        <div class="game-options">
+          <div>
+            <h4>בחר טווח מספרים</h4>
+            <select id="numbersRange">
+              <option value="10">10 - 1</option>
+              <option value="100">100 - 1</option>
+              <option value="1000">1000 - 1</option>
+            </select>
+          </div>
+          <div>
+            <h4>בחר אופרטור</h4>
+            <select id="operator">
+              <option value="+">+ פלוס</option>
+              <option value="-">- מינוס</option>
+              <option value="*">* כפל</option>
+              <option value="/">/ חילוק</option>
+            </select>
+          </div>
+        </div>
+        <hr />
+        <div class="math-challange">
+          <div>
+            <h5 id="mathEx"></h5>
+            <input
+              type="number"
+              name=""
+              id="userSoluation"
+              placeholder="תשובתך..."
+            />
+          </div>
+          <button id="checkAnswer">בדוק</button>
+        </div>
+        <div class="results-List">
+          <table>
+            <thead>
+              <tr>
+                <th>תרגיל</th>
+                <th>תשובה שלך</th>
+                <th>תשובה נכונה</th>
+                <th>נקודות</th>
+              </tr>
+            </thead>
+            <tbody id="results"></tbody>
+          </table>
+        </div>
+        <div class="game-score">
+          <div>הציון שלך <span id="userGrade"></span></div>
+          <button id="resetID">משחק חדש</button>
+          <div>צברת <span id="totalPoints">0</span> נקודות</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

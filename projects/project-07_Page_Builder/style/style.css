@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "heebo", sans-serif;
+  direction: rtl;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+title {
+  color: #1491a7;
+}
+
+span {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #f0f0f0;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+button {
+  padding: 6px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #1491a7;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input {
+  text-align: center;
+  margin-top: 5px;
+}
+
+button:nth-child(1) {
+  float: left;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 15px 0 10px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.container .main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fbfdfc;
+  flex: 5;
+}
+
+.container .main .sidebar-hide-btn {
+  height: 120px;
+  width: 20px;
+  background-color: #067077;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fbfdfc;
+  cursor: default;
+}
+
+.container .main #newPage {
+  width: 90%;
+  min-height: 100vh;
+  margin: 80px auto 0;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px #bbbbbb;
+}
+
+.container #userInterface {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #067077;
+  flex: 1;
+  color: #ffffff;
+  padding: 30px;
+}
+
+.container #userInterface .buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.container #userInterface select {
+  font-weight: 500;
+  margin: 5px 0 25px;
+  width: 90%;
+  height: 30px;
+  text-align: center;
+  font-size: 0.75rem;
+  appearance: none;
+  cursor: pointer;
+}
+
+.container #userInterface label {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.container #userInterface input {
+  height: 30px;
+  width: 90%;
+  border: none;
+  margin-bottom: 25px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.container #userInterface input[type="color"] {
+  padding: 2px;
+  cursor: pointer;
+}
+
+.container #userInterface textarea {
+  height: 100px;
+  width: 100%;
+  border: none;
+  margin: 5px 0 25px;
+  scroll-behavior: smooth;
+  padding: 10px;
+}
+
+.container #userInterface .box-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 8px;
+  text-align: center;
+  /* margin-bottom: 25px; */
+}
+
+.container #userInterface .id-name {
+  grid-column: span 2;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  /* margin-bottom: 25px; */
+}
+
+.container #userInterface #element-ID {
+  margin: 0;
+  flex: 1;
+}
+
+.container #userInterface .box-shadow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  text-align: center;
+}
+
+.container #userInterface .auto-save {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: right;
+  align-items: center;
+}
+
+.container #userInterface .auto-save input {
+  margin: 0;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.hide {
+  display: none;
+}

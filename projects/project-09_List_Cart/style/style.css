@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Rubik+Doodle+Shadow&display=swap");
+
+* {
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 900, "GRAD" 0, "opsz" 24;
+  color: #692222;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-size: 3em;
+  margin: 15px 0 25px;
+  color: #692222;
+}
+
+h2 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-size: 1.8em;
+  margin: 35px 0 20px;
+  color: #692222;
+}
+
+h3 {
+  font-size: 0.8em;
+  color: #692222a4;
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+input {
+  height: 40px;
+  flex: 8;
+  background: none;
+  border: 1px solid #692222a4;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 5px;
+  color: #692222;
+}
+
+input:nth-child(2) {
+  width: 60px;
+  flex: 1;
+  text-align: center;
+}
+
+::placeholder {
+  font-size: 0.9em;
+  color: #69222270;
+}
+
+button {
+  height: 40px;
+  width: 40px;
+  background: none;
+  border: 1px solid #692222a4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background: url(../images/ToDo_Background.jpg) no-repeat center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+.todo-container {
+  width: 45%;
+  padding: 0 50px;
+  font-family: "heebo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-container #delPopupWin {
+  display: none;
+  width: 300px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #692222;
+  background-image: url(../images/ToDo_Background.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  position: fixed;
+  top: calc(50% - 50px);
+  color: #692222;
+}
+
+.todo-container #delPopupWin .popup-win-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.todo-container #delPopupWin .popup-win-btns button {
+  width: fit-content;
+  height: fit-content;
+  padding: 7px 25px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: inherit;
+  border-radius: 25px;
+}
+
+.todo-container #delPopupWin p {
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: inherit;
+}
+
+.todo-container .todo-input {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.todo-container #uncompletedItems {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 14fr 1fr 1fr 1fr;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-container #uncompletedItems .item-row,
+.todo-container #completedItems .item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+
+.itemName,
+.itemQty {
+  display: flex;
+  align-items: center;
+  background-color: #69222220;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 0 10px;
+  color: #692222;
+  font-weight: 600;
+  height: 30px;
+}
+
+.itemQty {
+  width: 100px;
+}
+
+.itemName {
+  flex: 1;
+}
+
+.todo-container #completedItems .item-row .itemName,
+.todo-container #completedItems .item-row .itemQty {
+  text-decoration: line-through #692222 2px;
+  color: #692222a4;
+}
+
+.todo-container #uncompletedItems .items-list-btns,
+.todo-container #completedItems .items-list-btns {
+  width: 30px;
+  height: 30px;
+  font-size: 1.2em;
+}
+
+.todo-container #completedItems {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 14fr 1fr 1fr;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>תחזית בקליק</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-section">
+        <div>
+          <input type="text" id="city" />
+          <div class="button" id="search">חפש</div>
+        </div>
+        <div>
+          <h1 id="city-name">תל אביב</h1>
+          <h4 id="current-date-and-time"></h4>
+        </div>
+      </div>
+      <div class="current-weather-section">
+        <div class="current-weather">
+          <div id="weather-icon"></div>
+          <div>
+            <div class="current-cond">
+              <span class="material-symbols-rounded"> device_thermostat </span>
+              <h4 id="feels-like"></h4>
+            </div>
+            <div class="current-cond">
+              <span class="material-symbols-rounded"> humidity_low </span>
+              <h4 id="humidity"></h4>
+            </div>
+            <div class="current-cond">
+              <span class="material-symbols-rounded"> air </span>
+              <h4 id="wind-speed"></h4>
+            </div>
+          </div>
+        </div>
+        <div class="current-temp">
+          <p id="temp"></p>
+          <div>
+            <div>
+              <span class="cels">C°</span>
+              <span>|</span>
+              <span class="ferin">F°</span>
+            </div>
+            <h2 id="description"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="forcast"></div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

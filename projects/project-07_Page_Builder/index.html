@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Page Builder</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <div id="newPage"></div>
+        <div class="sidebar-hide-btn">
+          <span class="material-symbols-rounded"> chevron_right </span>
+        </div>
+      </main>
+      <aside id="userInterface">
+        <h1>בונה מסך</h1>
+        <p>
+          בונה הסמך מאפשר לך המשתמש לבנות דף אינטרנט ללא שום ידע בכתיבת קוד,
+          בעזרת הממשק הנוח והידידותי
+        </p>
+        <span>** יחידות מידה פיקסלים (px)</span>
+        <h2>מאפייני אלמנט</h2>
+        <div>
+          <div class="box-layout">
+            <div>
+              <label for="element-type">סוג האלמנט</label>
+              <select id="element-type">
+                <option value="span">SPAN</option>
+                <option value="div" selected>DIV</option>
+                <option value="p">P</option>
+                <option value="h1">H1</option>
+                <option value="h2">H2</option>
+                <option value="h3">H3</option></select
+              ><br />
+            </div>
+            <div>
+              <label for="bg-color">צבע רקע</label>
+              <input type="color" name="" id="bg-color" value="#5f5f5f" />
+            </div>
+            <div>
+              <label for="box-width">רוחב</label>
+              <input type="number" id="box-width" placeholder="הקלד כאן..." />
+            </div>
+            <div>
+              <label for="box-height">גובה</label>
+              <input type="number" id="box-height" placeholder="הקלד כאן..." />
+            </div>
+            <div class="id-name">
+              <label for="element-ID">בחר מאפיין ID</label>
+              <input type="text" id="element-ID" placeholder="הקלד כאן..." />
+            </div>
+          </div>
+          <span id="checkIdName"></span>
+        </div>
+
+        <h2>הוספת צל לאלמנט</h2>
+        <div class="box-shadow">
+          <div>
+            <label for="x-axis">ציר X</label>
+            <input type="number" id="x-axis" />
+          </div>
+          <div>
+            <label for="y-axis">ציר Y</label>
+            <input type="number" id="y-axis" />
+          </div>
+          <div>
+            <label for="shadow-color">צבע צל</label>
+            <input type="color" id="shadow-color" />
+          </div>
+        </div>
+        <div>
+          <label for="box-content">הוסף תוכן</label>
+          <textarea id="box-content" placeholder="הקלד כאן..."></textarea>
+        </div>
+        <h2>מאפייני גופן</h2>
+        <div class="box-layout">
+          <div>
+            <label for="font-color">בחר צבע</label>
+            <input type="color" id="font-color" value="#5f5f5f" />
+          </div>
+          <div>
+            <label for="font-size">הגדר גודל </label>
+            <input type="number" id="font-size" placeholder="הקלד כאן..." />
+          </div>
+        </div>
+        <h2>מאפייני מסגרת</h2>
+        <div class="box-layout">
+          <div>
+            <label for="border-width">הגדר עובי</label><br />
+            <input type="number" id="border-width" placeholder="הקלד כאן..." />
+          </div>
+          <div>
+            <label for="border-style">סגנון</label><br />
+            <select id="border-style">
+              <option value="dotted">מנוקד</option>
+              <option value="dashed">מקווקו</option>
+              <option value="solid">רציף</option>
+              <option value="double">כפול</option>
+              <option value="groove">מסילה שקועה</option>
+              <option value="ridge">בולט</option>
+              <option value="inset">בולט פנימה</option>
+              <option value="outset">בולט החוצה</option>
+              <option value="none" selected>ללא</option>
+            </select>
+          </div>
+          <div>
+            <label for="border-color">צבע</label><br />
+            <input type="color" id="border-color" value="#5f5f5f" />
+          </div>
+          <div>
+            <label for="border-radius">עיגול פינות</label><br />
+            <input type="number" id="border-radius" placeholder="הקלד כאן..." />
+          </div>
+        </div>
+        <h2>ריווחים לאלמנט</h2>
+        <div class="box-layout">
+          <div id="margin">
+            <label for="box-margin">ריווח חיצוני</label>
+            <input type="number" id="box-margin" placeholder="הקלד כאן..." />
+          </div>
+          <div id="padding">
+            <label for="box-padding">ריווח פנימי</label>
+            <input type="number" id="box-padding" placeholder="הקלד כאן..." />
+          </div>
+        </div>
+        <div class="buttons-grid">
+          <button id="add-Element">הוסף</button>
+          <button id="clear-Page">נקה</button>
+          <button id="save-Page">שמור</button>
+          <button id="load-Page">טען</button>
+        </div>
+        <div class="auto-save">
+          <label for="auto-save">שמירה אוטומטית</label>
+          <input type="checkbox" name="" id="auto-save" />
+        </div>
+      </aside>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

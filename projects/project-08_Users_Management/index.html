@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Management Interface</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="signupLoginForm">
+        <div class="toggle-tap">
+          <div class="tap" id="signupTap">הרשמה</div>
+          <div class="tap" id="loginTap">התחברות</div>
+        </div>
+        <div id="formContent"></div>
+      </div>
+      <div class="usersManagInter">
+        <div id="userEditpopup"></div>
+        <div id="promptDelUser"></div>
+        <h1>רשימת משתמשים</h1>
+        <table>
+          <thead>
+            <th>#</th>
+            <th>שם פרטי</th>
+            <th>שם משפחה</th>
+            <th>דוא"ל</th>
+            <th>סיסמה</th>
+            <th>סטטוס</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody id="usersTable"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

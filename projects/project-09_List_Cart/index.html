@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=Mi, initial-scale=1.0" />
+    <title>ניהול רשימת קניות</title>
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="todo-container">
+      <div id="delPopupWin">
+        <p id="itemToDel"></p>
+        <div class="popup-win-btns">
+          <button id="confirmDel">אישור</button>
+          <button id="cancelDel">ביטול</button>
+        </div>
+      </div>
+      <h1>רשימת קניות</h1>
+      <div>
+        <h3>
+          מערכת ניהול רשימת קניות מאפשר לך המשתמש ליצור, לערוך ולנהל רשימות
+          קניות בצורה נוחה ומאורגנת. המערכת כוללת יכולות להוספה, עדכון , ומחיקת
+          פריטים וכמויות ,שחזור פריטים שנמחקו, וכמובן סימון פריט כנרכש..
+        </h3>
+      </div>
+      <div class="todo-input">
+        <input type="text" id="itemTitle" placeholder="הקלד את שם המוצר..." />
+        <input type="number" id="itemQty" placeholder="כמות..." />
+        <button
+          id="addBtn"
+          class="material-symbols-rounded"
+          onclick="addItem()"
+          title="הוסף פריט"
+        >
+          add
+        </button>
+      </div>
+      <h2>פריטים לקנייה</h2>
+      <div id="uncompletedItems"></div>
+      <h2>פריטים שנקנו</h2>
+      <div id="completedItems"></div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>
