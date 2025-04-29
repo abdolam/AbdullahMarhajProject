@@ -1,5 +1,5 @@
 const weatherKey = "1fcb756b740eae171bab75c2e81e6e0f",
-  forcastKey = "bd5e378503939ddaee76f12ad7a97608";
+  forcastKey = "2388442352fed89a8e02c067ae59abd5";
 let city = "ירושלים",
   units = "metric",
   speed = 0,
